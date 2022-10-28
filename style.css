@@ -1,0 +1,223 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+    
+  }
+  :root{
+    --purple:rgb(72, 124, 184);
+    --violet:rgb(103,58,183);
+    --pink:rgb(244,143,177);
+}
+@keyframes background-pan {
+  from {
+    background-position: 0% center;
+  }
+  
+  to {
+    background-position: -200% center;
+  }
+}
+
+.form_titler {
+  color: white;
+  font-family: 'Kalam', cursive;
+  font-size: clamp(4em, 2vw, 4em);
+  font-weight: 400;
+  margin: 0px;
+  padding: 30px;
+  text-align: center;
+}
+.form_titler >.img{
+  animation: background-pan 3s linear infinite;
+  background: linear-gradient(
+    to right,
+    var(--purple),
+    var(--violet),
+    var(--pink),
+    var(--purple)
+  );
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  white-space: nowrap;
+}
+
+
+  body {
+    width: 100%;
+    height: 100vh;
+    font-family: 'Kalam', cursive;
+    font-size: 12px;
+    background: linear-gradient(to right, #9de2fd, #144252);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  .main {
+    position: relative;
+    width: 1000px;
+    height: 600px;
+    padding: 25px;
+    background-color: #ffffff00;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .fform {
+    width: 600px;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    padding: 18px;
+    background-color: #ffffff;
+    transition: 1.25s;
+  }
+  .form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
+
+  .form__input {
+    width: 350px;
+    height: 40px;
+    font-size: 13px;
+    outline: black;
+    border: none;
+    font-family: 'Kalam', cursive;
+    border-radius: 8px;
+    box-shadow:  2px 2px 2px #d1d9e6;
+  }
+  .form__input input {
+    background:#d1d9e6 ;
+    width: 350px;
+    height: 40px;
+    border-radius: 8px;
+    border: 3px solid white;
+    padding-left: 8px;
+    color: #000000;
+  }
+
+  .foogetlink {
+    color: #000000;
+    font-size: 15px;
+    margin-top: 25px;
+    border-bottom: 1px solid #a0a5a8;
+    line-height: 2;
+  }
+  .switch__titler{
+    color: #ffffff;
+    font-size: 34px;
+    font-weight: 700;
+  }
+  .title {
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 3;
+    color: #5FC3E4;
+  }
+  .description {
+    font-size: 14px;
+    letter-spacing: 0.25px;
+    text-align: center;
+    line-height: 1.6;
+  }
+  .button {
+    width: 180px;
+    height: 50px;
+    border-radius: 25px;
+    margin-top: 50px;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 1.15px;
+    background-color: #5FC3E4;
+    color: #ffffff;
+    border: none;
+    outline: none;
+  }
+  .fcontainer {
+    z-index: 100;
+    left: calc(100% - 600px );
+  }
+  
+  .scontainer {
+    left: calc(100% - 600px );
+    z-index: 0;
+  }
+  .switcher {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 400px;
+    padding: 50px;
+    z-index: 200;
+    transition: 1.25s;
+    background: rgba(255, 255, 244, 0.1);
+    overflow: hidden;
+    box-shadow: 0px 25px 45px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px) ;
+    border:1px solid rgba(255, 255, 244, 0.5);
+    border-right:1px solid rgba(255, 255, 244, 0.2);
+    border-bottom:1px solid rgba(255, 255, 244, 0.2);
+  }
+
+
+  .firsetflober{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    width: 400px;
+    padding: 50px 55px;
+    transition: 1.25s;
+  }
+  .switch__button {
+    cursor: pointer;
+  }
+  .switch__button:hover {
+    box-shadow: 2px 6px 5px #393a3b, -2px -2px 5px #f9f9f9;
+    transform: scale(0.985);
+    transition: 0.25s;
+  }
+  .switch__button:active, .switch__button:focus {
+    box-shadow: 2px 2px 2px #e6d1d1, 2px 2px 2px #f9f9f9;
+    transform: scale(0.97);
+    transition: 0.25s;
+  }
+  .is-txr {
+    left: calc(100% - 400px );
+    transition: 1.25s;
+    transform-origin: left;
+  }
+  .is-txl {
+    left: 0;
+    transition: 1.25s;
+    transform-origin: right;
+  }
+  .is-z200 {
+    z-index: 200;
+    transition: 1.25s;
+  }
+  .hide {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    transition: 1.25s;
+  }
+  .is-gx {
+    animation: is-gx 1.25s;
+  }
